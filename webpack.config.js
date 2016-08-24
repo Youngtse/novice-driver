@@ -1,7 +1,15 @@
 // webpack.config.js
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-
+var path = require("path");
+var webpack = require('webpack');
 module.exports = {
+    resolve: {
+        root: [],
+        alias: {
+            'jquery': path.resolve('./node_modules/jquery'),
+            'lodash': path.resolve('./node_modules/lodash'),
+        }
+    },
     // entry point of our application
     entry: './src/main.js',
     // where to place the compiled bundle
@@ -68,7 +76,13 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin("style.css", {
             allChunks: true
-        })
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
+            _: 'lodash',
+        }),
     ],
     eslint: {
         configFile: '.eslintrc'

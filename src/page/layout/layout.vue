@@ -6,7 +6,8 @@
     <nav class="navbar navbar-default my-navbar">
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#">试试Markdown</a></li>
+                <li><a v-link="{path: '/'}">试试Markdown</a></li>
+                <li><a v-link="{path: '/test/index'}">一个小组件</a></li>
                 <li><a href="#" @click.prevent="clickNav">别点</a></li>
             </ul>
         </div>

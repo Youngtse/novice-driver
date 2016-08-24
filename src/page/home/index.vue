@@ -8,6 +8,7 @@
     .mark-input {
         border: none;
         min-height: 100%;
+        height: 100%;
         outline: none;
         resize: none;
         background: #EEE;
