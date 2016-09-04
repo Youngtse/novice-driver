@@ -1,6 +1,6 @@
 <!-- Created by Yang on 16/8/23. -->
 <style lang="less" rel="stylesheet/less">
-    .led-number {
+    .single-number {
         @bg-color: #000;
         @number-color: #fff;
         @line-height: 4px;
@@ -10,6 +10,7 @@
         padding: @line-height*2+@line-width @line-width/2;
         background: @bg-color;
         font-size: 0;
+        overflow: hidden;
         &:before {
             content: '';
             display: inline-block;
@@ -63,7 +64,7 @@
     }
 </style>
 <template>
-    <div class="led-number">
+    <div class="single-number">
         <div :class="line" v-for="line in showLines"></div>
     </div>
 </template>

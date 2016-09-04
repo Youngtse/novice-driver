@@ -4,18 +4,16 @@
 </style>
 <template>
     <div>一个显示数字的组件</div>
-    <led-number num="2"></led-number>
-    <led-number num="3"></led-number>
-    <led-number num="3"></led-number>
+    <number value="23333333"></number>
 </template>
 <script>
-    import ledNumber from "../component/widgets/led_number.vue"
+    import Number from "../component/widgets/number.vue"
     export default{
         data(){
             return {}
         },
         components: {
-            ledNumber
+            Number
         }
     }
 </script>
